@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
+  </head>
+  <body class="body">
+    <div class="h_um">
+      <h1 class="h1">Login Enel</h1>
+    </div>
+    <label>
+      Email:
+      <input
+        class="email"
+        type="email"
+        id="email"
+        placeholder="Informe seu email"
+      />
+    </label>
+
+    <br />
+    <label>
+      Senha:<input
+        class="senha email"
+        type="password"
+        id="senha"
+        placeholder="Informe sua senha"
+      /><br />
+    </label>
+
+    <button class="butao01" type="submit" id="enviar">Entrar</button>
+    <button class="butao02" type="submit" id="limpar">Limpar</button>
+
+    <script>
+      document.getElementById("enviar").addEventListener("click", function () {
+        const emailCorreto = "paulo@gmail.com";
+        const senhaCorreta = "123";
+
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        if (email == emailCorreto && senha == senhaCorreta) {
+          window.location.href = "consumo.html";
+        } else {
+          alert("E-mail ou senha incorretos");
+        }
+      });
+      document.getElementById("limpar").addEventListener("click", function () {
+        document.getElementById("email").value = "";
+        document.getElementById("senha").value = "";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* Estilos Gerais */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex; /* Transforma o body em um flex container */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo filho (o .body) */
+  align-items: center; /* Centraliza verticalmente o conteúdo filho (o .body) */
+  min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+  margin: 0;
+  color: #333;
+  padding: 20px; /* Adiciona um padding geral para não colar nas bordas em telas pequenas */
+  box-sizing: border-box; /* Garante que padding não aumente a largura total */
+
+  /* --- PROPRIEDADES PARA A IMAGEM DE FUNDO --- */
+  background-image: url('enel.jpeg'); /* Caminho da sua imagem */
+  background-size: cover; /* Faz a imagem cobrir todo o fundo, cortando se necessário */
+  background-position: center center; /* Centraliza a imagem no fundo */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+  /* --- FIM DAS PROPRIEDADES DE FUNDO --- */
+}
+
+/* Container principal para centralizar o formulário */
+.body {
+  background-color: #ffffff; /* Fundo branco para o formulário para melhor legibilidade */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Largura máxima para o formulário de login */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Restante do seu CSS permanece o mesmo... */
+.h_um {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 2.2em;
+  color: #007bff;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  display: inline-block;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.email {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.email:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.email::placeholder {
+  color: #adb5bd;
+}
+
+.butao01,
+.butao02 {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: calc(50% - 10px);
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.butao01 {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.butao01:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.butao02 {
+  background-color: #6c757d;
+  color: white;
+  margin-left: 10px;
+}
+
+.butao02:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .body {
+    margin: 15px;
+    padding: 30px 20px;
+    max-width: unset;
+  }
+
+  .butao01,
+  .butao02 {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

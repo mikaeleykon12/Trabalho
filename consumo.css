@@ -1,0 +1,160 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #f0f2f5; REMOVIDO: Será substituído pela imagem de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+
+    /* --- NOVAS PROPRIEDADES PARA A IMAGEM DE FUNDO --- */
+    background-image: url('enel-2-684x420.jpg'); /* Caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo, cortando se necessário */
+    background-position: center center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola (opcional) */
+    /* --- FIM DAS NOVAS PROPRIEDADES --- */
+}
+
+/* Estilos do Formulário */
+#formulario {
+    background-color: #ffffff; /* Fundo branco para o formulário para melhor legibilidade */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+/* Estilos do Fieldset e Legend */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos das Labels */
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilos dos Campos de Input */
+.campo {
+    width: calc(100% - 20px); /* 100% menos o padding */
+    padding: 12px 10px;
+    margin-top: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+.campo:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.campo::placeholder {
+    color: #adb5bd;
+}
+
+/* Estilos dos Botões */
+.botoes {
+    display: flex;
+    justify-content: space-around; /* Distribui os botões uniformemente */
+    margin-top: 25px;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+button, input[type="button"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex: 1; /* Faz os botões ocuparem espaço igual */
+}
+
+#cadastrar {
+    background-color: #28a745; /* Verde para cadastrar */
+    color: white;
+}
+
+#cadastrar:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+#consultar {
+    background-color: #007bff; /* Azul para consultar */
+    color: white;
+}
+
+#consultar:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilos para a lista de consumo (se for adicionada dinamicamente) */
+#lista-consumo {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+#lista-consumo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-consumo li {
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+#lista-consumo li:nth-child(odd) {
+    background-color: #f8f9fa; /* Um pouco diferente para linhas alternadas */
+}
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    #formulario {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .botoes {
+        flex-direction: column; /* Empilha os botões em telas menores */
+    }
+
+    button, input[type="button"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

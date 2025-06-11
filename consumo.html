@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="consumo.css">
+</head>
+<body>
+    
+    <form id="formulario">
+        <fieldset>
+            <legend>Cadastro</legend>
+            
+            <label for="id_nome">Nome:
+                <input 
+                type="text"
+                id="nome"
+                placeholder="Informe o nome"
+                required
+                class="campo"
+                >
+            </label>
+            </br>
+
+            <label for="id_Consumo">Consumo(kWh)
+                <input 
+                type="number"
+                id="consumo"
+                placeholder="Informe o consumo"
+                required
+                class="campo"
+                >
+            </label>
+
+            <div class="botoes">
+                <button type="submit" id="cadastrar">Cadastrar</button>
+                <input type="button" id="consultar" value="Consultar">
+            </div>
+            <div id="lista-consumo"
+        </fieldset>
+        
+        
+    </form>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="Consumo1.js"></script>
+    
+</body>
+</html>
